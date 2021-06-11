@@ -1,0 +1,22 @@
+#Ola para o Bot    #=======================================================================OK
+        if message.content.startswith(prefix+"ola"):
+                       channel = message.channel
+                       await channel.send("Ola, suave {0.author.mention} ?".format(message))
+        
+        #Bot falar com  alguem marcado    #========================================================OK
+        if message.content.startswith(prefix+"to"): 
+                       print(message.content)
+                       channel = message.channel
+                       print(message.channel)
+                       await channel.send(str(message.content).split('to ')[1]+random.choice(list(palavras)).format(message))
+                        
+        #Chama o Bot            #==================================================================OK
+        if message.content.startswith(prefix+'bot'): 
+                       channel = message.channel
+                       await channel.send("O que deseja {0.author.mention} ?".format(message))
+        
+        #Ser abraçado pelo Bot  #==================================================================OK
+        if message.content.startswith(prefix+'hug'): 
+                       channel = message.channel
+                       
+                       await channel.send("Abraços {0.author.mention}".format(message))

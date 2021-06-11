@@ -1,0 +1,9 @@
+CREATE TABLE aposta(
+
+id_user VARCHAR(20),
+FOREIGN KEY (id_user) REFERENCES user_discord(id),
+
+dinheiroApostado NUMERIC,
+
+data Date
+);
